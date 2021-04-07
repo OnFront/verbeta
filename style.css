@@ -1,0 +1,435 @@
+/*
+Theme Name: Detramax
+Text Domain: detramax
+Version: 1
+
+Requires PHP: 5.2.4
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-patterns, block-styles, wide-blocks, accessibility-ready
+Author: Digistat, Jarosław Decowski
+Author URI: https://digistat.pl
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+
+
+*, 
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    font-family: 'Poppins', sans-serif !important;
+
+    --detraRed: #DA243A;
+}
+
+
+body{
+  overflow-x: hidden;
+  font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+section{
+  padding: 10% 10%;
+}
+
+.icon{
+  cursor: pointer;
+}
+
+.cta{
+  padding: 0 25px;
+  background: white;
+  border: 2px solid var(--detraRed);
+  border-radius: 15px;
+  white-space: nowrap;
+  position: relative;
+  font-weight: 600;
+}
+
+
+ul{
+  list-style-type: none;
+}
+
+.text-span{
+  color: var(--detraRed);
+}
+
+.social{
+  display: none;
+}
+
+main{
+  height: 100vh;
+  background: url(images/vector_graphic_hero.jpg) -50px bottom no-repeat;
+  background-size: 250px auto;
+}
+
+main header .container{
+  padding: 0 10%;
+}
+/* hamburger menu */
+
+.menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+    width: 35px;
+    z-index: 99;
+  }
+  .line {
+    fill: none;
+    stroke: black;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+
+  .navbar-nav{
+      display: none;
+      position: absolute;
+      
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 85vh;
+      width: 100%;
+      top: 116px;
+      right: -100%;
+      background: black;
+  
+      text-decoration: none;
+      z-index: 10;
+      
+
+  }
+
+  .navAnim{
+    animation-name: showNav;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+  }
+
+
+    @keyframes showNav{
+        from{
+            right: -100%;
+        }
+
+        to{
+            right: 0;
+        }
+    }
+
+.nav-link{
+  text-transform: uppercase;
+}
+
+.contact-item{
+
+  margin-bottom: 2em;
+}
+
+.nav-link:hover{
+  opacity: .9;
+}
+
+.nav-link::after{
+  content: '';
+  display: block;
+  background-color: white;
+  height: 2px;
+  width: 0%;
+  margin-top: 2px;
+  transition: width .2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.nav-link:hover::after{
+  content: '';
+  display: block;
+  background-color: white;
+  height: 2px;
+  width: 100%;
+  margin-top: 2px;
+  transition: width .25s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+ 
+
+.hero{
+  padding: 5% 10%;
+}
+
+.hero-content__left{
+  display: none;
+}
+
+.hero-content__right{
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+.products-content__right > *,
+.hero-content__right > *{
+  margin-bottom: 2em;
+  text-align: center;  
+}
+
+.products-content__right button,
+.hero-content__right button{
+  text-align: left;
+  max-width: 195px;
+  line-height: 26px;
+  margin: 0 auto;
+}
+
+.products-content__right button::after,
+.hero-content__right button::after{
+  content: url(images/arrow-right.svg);
+   width: 20px;
+   display: inline-flex;
+   position: relative;
+   top: 5px;
+   margin-left: 10px;
+
+}
+
+
+.scroll-container{
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  width: 12px;
+  height: 25px;
+  background-color: transparent;
+  border: 2px solid var(--detraRed);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  animation: jump 1.9s ease-in-out infinite;
+}
+
+.scroller{
+  background-color: var(--detraRed);
+  width: 55%;
+  height: 8px;
+  border-radius: 40px;
+  margin-top: 5px;
+}
+
+@keyframes jump {
+  0%{
+    bottom: 2%;
+  }
+
+  50%{
+    bottom: 4%;
+  }
+
+  100%{
+    bottom: 2%;
+  }
+}
+
+.products > *{
+  margin-bottom: 2em;
+}
+
+.products-content__right{
+  display: flex;
+  flex-flow:column;
+}
+
+.splide__track{
+  width: 100%;
+  
+}
+
+  .splide__track img{
+    transform: scale(0.6);
+  }
+
+.splide__arrow{
+  background-color: var(--detraRed);
+ 
+}
+
+.splide__arrow path{
+  fill: white;
+}
+
+.splide__pagination__page.is-active{
+  background: var(--detraRed);
+}
+
+.banner{
+  background: url(images/banner.jpg)  no-repeat; 
+  background-size: cover;
+  padding:10%;
+
+}
+
+.benefits > li{
+  margin-bottom: 2em;
+}
+
+
+.benefit > *{
+  margin-bottom: 1em;
+
+}
+
+.benefit-icon img{
+  position: relative;
+  height: 50px;
+  width: auto;
+}
+
+.benefits{
+  padding-left: 0;
+}
+
+  .benefits:nth-last-of-type(li){
+    margin-bottom: 0;
+  }
+
+.benefit{
+  text-align: center;
+  color: white;
+}
+
+.pre-news-content{
+  background: rgba( 0, 0, 0, 0.10 );
+  box-shadow: 0 8px 32px 0 rgba(5, 70, 32, 0.37);
+  backdrop-filter: blur( 10.5px );
+  -webkit-backdrop-filter: blur( 10.5px );
+  border-radius: 10px;
+  border: 1px solid rgba(216, 216, 216, 0.18);
+}
+
+.pre-news{
+  text-align: center;
+  background: url(images/grapes_background.jpg) center center no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.grapes-container{
+  display: none;
+}
+
+.news header{
+  text-align: center;
+  margin-bottom: 6em;
+}
+
+
+.post{
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+.post > *{
+  margin-bottom: 1.25em;
+}
+
+.post-cta{
+  background: transparent;
+  border: none;
+  color: var(--detraRed);
+}
+
+footer{
+  background: url(images/footer_background.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 10%;
+  padding-bottom: 0;
+  color: white;
+}
+
+  footer h2{
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  .company-desc{
+    margin-bottom: 4em;
+  }
+
+.company-desc > *{
+  margin-bottom: 1em;
+}
+
+ .contact-list:nth-last-of-type('li'){
+   margin-bottom: 0;
+ }
+
+.contact-item img{
+  margin-right: 10px;
+}
+
+
+
+.contact-list{
+  padding-left: 0;
+}
+
+.copy{
+  background: black;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.copy p{
+  margin-bottom: 0;
+}
+
+.para-detramax span,
+.para-digistat span{
+  font-weight: 600;
+}
