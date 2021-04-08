@@ -1,24 +1,4 @@
-/*
-Theme Name: Detramax
-Text Domain: detramax
-Version: 1
-
-Requires PHP: 5.2.4
-Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
-Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-patterns, block-styles, wide-blocks, accessibility-ready
-Author: Digistat, Jarosław Decowski
-Author URI: https://digistat.pl
-
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-All files, unless otherwise stated, are released under the GNU General Public
-License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned
-with others.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
 
 
 *, 
@@ -30,7 +10,7 @@ with others.
 }
 
 :root{
-    font-family: 'Poppins', sans-serif !important;
+    font-family: 'Poppins', sans-serif;
 
     --detraRed: #DA243A;
 }
@@ -39,6 +19,7 @@ with others.
 body{
   overflow-x: hidden;
   font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-family: 'Poppins', sans-serif;
 }
 
 section{
@@ -198,14 +179,16 @@ main header .container{
   transition: width .25s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
  
+.hero-wrapper{
+  position: relative;
+  /* height: 82%; */
+}
 
 .hero{
   padding: 5% 10%;
 }
 
-.hero-content__left{
-  display: none;
-}
+
 
 .hero-content__right{
   display: flex;
@@ -220,23 +203,17 @@ main header .container{
 
 .products-content__right button,
 .hero-content__right button{
+  display: flex;
+  justify-content: space-between;
   text-align: left;
-  max-width: 195px;
+  padding: 5px 20px 5px 25px;
   line-height: 26px;
   margin: 0 auto;
 }
 
-.products-content__right button::after,
-.hero-content__right button::after{
-  content: url(images/arrow-right.svg);
-   width: 20px;
-   display: inline-flex;
-   position: relative;
-   top: 5px;
-   margin-left: 10px;
-
+.btn-icon{
+  margin-left: 5px;
 }
-
 
 .scroll-container{
   position: absolute;
@@ -432,4 +409,57 @@ footer{
 .para-detramax span,
 .para-digistat span{
   font-weight: 600;
+}
+
+
+@media screen and (min-width: 411px){
+  .hero-content__right p{
+    margin-bottom: 4em;
+  }
+}
+
+@media screen and (min-width: 540px){
+  .hero-wrapper{
+    height: 70%;
+  }
+
+  .scroll-container{
+    margin-bottom: 2em;
+  }
+}
+
+
+@media screen and (min-width: 768px){
+
+
+  .cta{
+    padding: 5px 20px;
+  }
+
+   main{
+    background: url(images/vector_graphic_hero.jpg) -50px bottom no-repeat;
+    background-size: 500px auto;
+  } 
+
+  .menu{
+    display: none;
+  }
+
+  .hero-content__right{
+    margin-left: auto;
+  
+  }
+
+    .hero-content__right button{
+      margin: 0 auto 0 0;
+    }
+
+  .products-content__right > *,
+   .hero-content__right > *{
+     text-align: left;
+   }
+
+   .scroll-container{
+    margin-bottom: 1em;
+  }
 }
