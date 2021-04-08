@@ -9,7 +9,7 @@ const hamburger = document.querySelector('.menu');
 const nav = document.querySelector('.navbar-nav');
 
 
-hamburger.addEventListener('click', function(){
+hamburger.addEventListener('click', function(e){
     hamburger.classList.toggle('opened');
     this.setAttribute('aria-expanded', this.classList.contains('opened'));
     
@@ -19,7 +19,6 @@ hamburger.addEventListener('click', function(){
     } else {
         nav.style.display = 'none';
     }
-
 });
 
 
