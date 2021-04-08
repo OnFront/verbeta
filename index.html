@@ -41,7 +41,7 @@
                         <a class="nav-link text-white" href="#products">Linia Detramax</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#banner">Dowiedz się więcej</a>
+                        <a class="nav-link text-white" href="#news">Dowiedz się więcej</a>
                     </li>
                     <li class="nav-item contact-item">
                         <a class="nav-link text-white" href="#footer">Kontakt</a>
@@ -56,13 +56,14 @@
                 </div>
             </nav>
     </header>
-    <div class="hero container" id="hero">
-            <div class="col hero-content__right">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit hendrerit elit. Mauris gravida nisl vestibulum tempor mattis. Cras eget vulputate orci. Morbi dui arcu, consectetur non semper et, dapibus a velit.</p>
-                <button class="cta" onClick="document.querySelector('.products').scrollIntoView();">Dowiedz się więcej</button>
-            </div>
-            <div class="col hero-content__left"><img src="images/vector_graphic_hero.svg"></div>
+    <div class="hero-wrapper d-flex flex-column justify-content-center align-items-center">
+        <div class="hero container" id="hero">
+                <div class="col col-md-8 hero-content__right">
+                    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit hendrerit elit. Mauris gravida nisl vestibulum tempor mattis. Cras eget vulputate orci. Morbi dui arcu, consectetur non semper et, dapibus a velit.</p>
+                    <button class="cta" onClick="document.querySelector('.news').scrollIntoView();">Dowiedz się więcej<span class="btn-icon" role="img"><img src="images/arrow-right.svg" alt="arrow vector icon"></span></button>
+                </div>
+        </div>
     </div>
     <div class="scroll-container">
         <div class="scroller"></div>
@@ -73,7 +74,7 @@
     <div class="col products-content__right">
         <h1>Odkryj linię <span class="text-span">Detramax</span> . </h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit hendrerit elit. Mauris gravida nisl vestibulum tempor mattis. Cras eget vulputate orci. Morbi dui arcu, consectetur non semper et, dapibus a velit.</p>
-        <button class="cta">Sprawdź</button>
+        <button class="cta">Sprawdź<span class="btn-icon" role="img"><img src="images/arrow-right.svg" alt="arrow vector icon"></span></button>
     </div>
 
     <div class="splide">
@@ -123,7 +124,7 @@
     </div>
 </section>
 
-<section class="news">
+<section class="news" id="news">
     <div class="container">
         <header>
             <h2>Aktualności <span class="text-span">Detramax</span>.</h2>
