@@ -16,6 +16,7 @@
 }
 
 
+
 body{
   overflow-x: hidden;
   font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1600 - 320)));
@@ -25,6 +26,8 @@ body{
 section{
   padding: 10% 10%;
 }
+
+
 
 .icon{
   cursor: pointer;
@@ -252,6 +255,36 @@ main header .container{
   }
 }
 
+.cart-container{
+  position: fixed;
+  background-color: var(--detraRed);
+  height: 50px;
+  width: 45px;
+  right: 0;
+  bottom: 100px;
+  border-radius: 25px 0 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  cursor: pointer;
+  border: none;
+}
+
+  .cart{
+    position: relative;
+  }
+
+    .cart span{
+      display: none;
+    }
+
+    .cart img{
+      position: relative;
+      height: 25px;
+      width: auto;
+    }
+
 .products > *{
   margin-bottom: 2em;
 }
@@ -325,7 +358,16 @@ main header .container{
   color: white;
 }
 
+.pre-news{
+  position: relative;
+  text-align: center;
+  background: url(images/grapes_background.jpg) center center no-repeat;
+  background-size: cover;
+  color: white;
+}
+
 .pre-news-content{
+  padding: 10px 20px;
   background: rgba( 0, 0, 0, 0.10 );
   box-shadow: 0 8px 32px 0 rgba(5, 70, 32, 0.37);
   backdrop-filter: blur( 10.5px );
@@ -334,12 +376,17 @@ main header .container{
   border: 1px solid rgba(216, 216, 216, 0.18);
 }
 
-.pre-news{
-  text-align: center;
-  background: url(images/grapes_background.jpg) center center no-repeat;
-  background-size: cover;
-  color: white;
-}
+  .grape-leaf{
+    position: absolute;
+    transform: scale(.3);
+    left: -342px;
+    top: -355px;
+    z-index: 1;
+  }
+
+  .grape-leaf-flipped{
+    display: none;
+  }
 
 .grapes-container{
   display: none;
@@ -403,6 +450,10 @@ footer{
    margin-bottom: 0;
  }
 
+ .contact p{
+   white-space: nowrap;
+ }
+
  .contact-item{
    margin-bottom: 0;
  }
@@ -457,6 +508,10 @@ footer{
     margin-bottom: 2em;
   }
 
+  .splide__slide img{
+    transform: scale(0.6);
+  }
+
   .benefits{
     flex-flow: row;
     justify-content: space-evenly;
@@ -468,12 +523,20 @@ footer{
     margin-bottom: 0;
   }
 
-
-
   .copy{
     display: flex;
     justify-content: space-between;
     padding: 1% 10%;
+  }
+
+  
+
+  .company-desc{
+    margin-bottom: 0;
+  }
+
+  footer{
+    padding: 30px 10%;
   }
 }
 
@@ -560,9 +623,57 @@ footer{
     padding: 5% 10%;
   }
 
+  .pre-news{
+    color: black;
+    background: white;
+    background-size: unset;
+  }
+
+    .pre-news h2{
+      z-index: 1;
+    }
+
   .splide__track img{
     transform: scale(0.8);
-}
+  }
+
+  .grape-leaf{
+    transform: scale(0.6);
+    top: -270px;
+  }
+
+  .grape-leaf-flipped{
+    display: block;
+    position: absolute;
+    transform: scale(0.6);
+    right: -342px;
+    top: -270px;
+    z-index: 0;
+  }
+
+  .grapes-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+    .grapes-container img{
+      position: relative;
+      width: auto;
+      height: 80%;
+      border-radius: 25px;
+    }
+
+  .pre-news-content{
+    padding: 10px 20px;
+    background: transparent;
+    box-shadow: unset;
+    backdrop-filter: unset;
+    -webkit-backdrop-filter: unset;
+    border-radius: 0px;
+    border: none;
+  }
 
 }
 
@@ -585,6 +696,46 @@ footer{
     margin: 0 auto 0 0;
   }
 
+  .cart-container{
+    position: fixed;
+    background-color: var(--detraRed);
+ 
+    right: 15px;
+    bottom: 100px;
+    border-radius: 100%;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    padding: 45px;
+    
+  }
+  
+    .cart{
+      position: relative;
+      display: flex;
+      flex-flow:column;
+      text-align: center;
+    }
+
+    .cart img{
+      position: relative;
+      height: 25px;
+      width: auto;
+      margin-bottom: 5px;
+    }
+
+    .cart span{
+      display: block;
+      font-size: 12px;
+      color: white;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  
+     
+  
   footer{
     text-align: left;
     padding: 2.5% 10%;
@@ -616,11 +767,16 @@ footer{
 
 @media (min-width: 1140px){
 
+
   main{
     background: url(images/vector_graphic_hero.jpg) -50px bottom no-repeat;
     background-size: 600px auto;
   } 
 
+  .banner{
+    padding: 30px 10%;
+
+  }
 
   .navbar-brand{
     margin: 0 auto 0 0;
@@ -630,26 +786,33 @@ footer{
     justify-content: flex-end;
   }
 
-  .products-content__right > *,
-   .hero-content__right > *{
-    margin-bottom: 1em;
+  .products-content__right > p,
+   .hero-content__right > p{
+    margin-bottom: 1.25em;
   }
+
+  h1,h2{
+    margin-bottom: 1.25em;
+  }
+
+
 }
 
 @media (min-width: 1400px){
 
-  
 
-  main{
-    background: url(images/vector_graphic_hero.jpg) -50px bottom no-repeat;
-    background-size: 750px auto;
+    main{
+      background: url(images/vector_graphic_hero.jpg) -50px bottom no-repeat;
+      background-size: 750px auto;
+    }
+
+    .hero{
+      padding: 5% 8%;
+    }
+
+    .cart-container{
+      right: 5%;
   }
-
-  .hero{
-    padding: 5% 8%;
-  }
-
- 
 }
 
 @media (min-width: 1600px){
