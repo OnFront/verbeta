@@ -56,16 +56,6 @@
                 </div>
             </nav>
     </header>
-
-    <!-- $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-); -->
-
     <div class="hero-wrapper container d-flex flex-column justify-content-center align-items-center">
         <div class="hero container" id="hero">
                 <div class="col col-md-8 col-lg-6 col-xl-5 col-xxl-5 hero-content__right">
@@ -79,6 +69,9 @@
         <div class="scroller"></div>
     </div>
 </main>
+<button class="cart-container" onclick="location.href='http://www.detramax.pl/produkty'">
+    <div class="cart"><img src="images/cart.svg" alt="ikona koszyka"><span>kup online</span></div>
+</button>
 <section class="products" id="products">
     <div class="row">
         <div class="col col-lg-6 products-content__right">
@@ -122,12 +115,14 @@
 </section>
 
 <section class="pre-news">
+    <img class="grape-leaf" src="images/winorosl.svg" alt="grafika winorośli">
+    <img class="grape-leaf-flipped" src="images/grape_leaf_flipped.svg" alt="grafika winorośli">
     <div class="container">
         <div class="row pre-row">
-            <div class="col-5 grapes-container">
-                <img src="images/grapes_img.jpg" alt="zdjecie czarnego winogrono">
+            <div class="col col-md-6 grapes-container">
+                <img src="images/grapes_container.jpg" alt="zdjecie czarnego winogrono">
             </div>
-            <div class="col pre-news-content">
+            <div class="col pre-news-content d-md-flex flex-md-column justify-content-md-center">
                 <h2>Ekstrakt z liści <span class="text-span">winorośli</span>.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia officiis fuga ad quisquam mollitia omnis quae delectus commodi dolor officia, ratione nam vel. Velit, corporis adipisci deserunt veritatis repudiandae nesciunt et consequuntur magnam. 
                 </p>
@@ -226,6 +221,6 @@
 
 
     <script src="app.js "></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="inc/splide.min.js"></script>
 </body>
 </html>
