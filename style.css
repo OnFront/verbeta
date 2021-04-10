@@ -1,5 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+/*
+Theme Name: Detramax
+Author: Digistat, Jarosław Decowski
 
+Requires PHP: 5.2
+
+Text Domain: Detramax
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
 
 *, 
 *::before,
@@ -11,7 +20,6 @@
 
 :root{
     font-family: 'Poppins', sans-serif;
-
     --detraRed: #DA243A;
 }
 
@@ -58,8 +66,13 @@ ul{
 
 main{
   height: 100vh;
-  background: url(images/vector_graphic_hero.jpg) -50px bottom no-repeat;
+  background: url(images/vector_graphic_hero.jpg) left bottom no-repeat;
   background-size: 250px auto;
+  margin-top: 10px;
+}
+
+.top-nav{
+  margin-bottom: 2em;
 }
 
 main header .container{
@@ -158,6 +171,7 @@ main header .container{
 .nav-link{
   text-transform: uppercase;
   color: white !important;
+ 
 }
 
 .contact-item{
@@ -172,6 +186,7 @@ main header .container{
 .nav-link::after{
   content: '';
   display: block;
+
   background-color: white;
   height: 2px;
   width: 0%;
@@ -195,7 +210,8 @@ main header .container{
 }
 
 .hero{
-  padding: 5% 10%;
+  /* padding: 5% 10%; */
+  margin: 5%;
 }
 
 
@@ -225,41 +241,6 @@ main header .container{
   margin-left: 5px;
 }
 
-.scroll-container{
-  position: absolute;
-  left: 50%;
-  bottom: 2%;
-  width: 12px;
-  height: 25px;
-  background-color: transparent;
-  border: 2px solid var(--detraRed);
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  animation: jump 1.9s ease-in-out infinite;
-}
-
-.scroller{
-  background-color: var(--detraRed);
-  width: 55%;
-  height: 8px;
-  border-radius: 40px;
-  margin-top: 5px;
-}
-
-@keyframes jump {
-  0%{
-    bottom: 2%;
-  }
-
-  50%{
-    bottom: 4%;
-  }
-
-  100%{
-    bottom: 2%;
-  }
-}
 
 .cart-container{
   position: fixed;
@@ -499,6 +480,9 @@ footer{
   }
 }
 
+
+
+
 @media(min-width: 500px){
 
   .logo-footer{
@@ -509,9 +493,9 @@ footer{
     height: 70%;
   }
 
-  .scroll-container{
+  /* .scroll-container{
     margin-bottom: 2em;
-  }
+  } */
 
   .splide__slide img{
     transform: scale(0.4);
@@ -548,12 +532,16 @@ footer{
 
 @media (min-width: 768px){
 
+  .navbar .container{
+    align-items: baseline;
+  }
+
   .cta{
     padding: 5px 20px;
   }
 
    main{
-    background: url(images/vector_graphic_hero.jpg) -50px bottom no-repeat;
+
     background-size: 500px auto;
   } 
 
@@ -562,7 +550,8 @@ footer{
   } 
 
   .navbar{
-    margin-top: 2em;
+
+    height: 75px;
   }
 
   .navbar .container{
@@ -589,28 +578,54 @@ footer{
   } 
 
   .nav-item{
-    padding: 0px 10px;
+    padding: 0px 20px;
   }
 
   .contact-item{
-    margin-bottom: 0;
-    background-color: var(--detraRed);
-   
-    border-radius: 25px;
+    margin-bottom: 0; 
   }
+
+  .nav-link {
+      color: black !important;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 0;
+    }
+
+    
+  .nav-item::after{
+    background-color: var(--detraRed);
+  }
+
+  .nav-item:hover::after{
+  
+    background-color: var(--detraRed);
+
+  }
+
+  .nav-contact-item a::after{
+    content: "";
+    background: transparent;
+  }
+
+  .nav-contact-item:hover{
+    background-color: black;
+    transition: background-color .3s ease-out;
+  }
+    .nav-contact-item a:hover::after{
+      background: transparent;
+    }
 
   
+ .nav-contact-item{
+   background-color: var(--detraRed);
+   border-radius: 25px;
+   padding: 0px 25px !important;
+ }
 
-.nav-link {
-    color: black !important;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 2px 0;
-    
-  }
-
-  .contact-item .nav-link{
+  .nav-contact-item a{
     color: white !important;
+  
   }
 
 
@@ -624,16 +639,16 @@ footer{
 
   }
 
-  .contact-item a::after{
+  .nav-contact-item a::after{
     content: "";
     background: transparent;
   }
 
-  .contact-item:hover{
+  .nav-contact-item:hover{
     background-color: black;
     transition: background-color .3s ease-out;
   }
-    .contact-item a:hover::after{
+    .nav-contact-item a:hover::after{
       background: transparent;
     }
 
@@ -659,9 +674,9 @@ footer{
      text-align: left;
    }
 
-   .scroll-container{
+   /* .scroll-container{
     margin-bottom: 1em;
-  }
+  } */
 
   .banner{
     padding: 5% 10%;
@@ -724,6 +739,45 @@ footer{
   section{
     padding: 2% 10%;
   }
+
+
+
+  
+.scroll-container{
+
+  margin: 5% auto auto auto;
+  background-color: transparent;
+  border: 2px solid var(--detraRed);
+  width: 12px;
+  height: 25px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center; 
+  position: relative;
+  animation: jump 1.9s ease-in-out infinite;
+}
+
+.scroller{
+  background-color: var(--detraRed);
+  width: 4px;
+  height: 8px;
+  border-radius: 40px;
+  margin: auto auto 4px auto ;
+}
+
+@keyframes jump {
+  0%{
+    bottom: 2%;
+  }
+
+  50%{
+    bottom: 4%;
+  }
+
+  100%{
+    bottom: 2%;
+  }
+}
 
   .products-content__right{
     justify-content: center;
@@ -816,8 +870,9 @@ footer{
 
 
   main{
-    background: url(images/vector_graphic_hero.jpg) -50px bottom no-repeat;
-    background-size: 600px auto;
+
+    background-size: auto 100%;
+    
   } 
 
   .banner{
@@ -852,13 +907,14 @@ footer{
 @media (min-width: 1400px){
 
 
-    main{
-      background: url(images/vector_graphic_hero.jpg) -50px bottom no-repeat;
-      background-size: 750px auto;
-    }
+    /* main{
+      background: url(images/vector_graphic_hero.jpg) left bottom no-repeat;
+      background-size: auto 80%;
+    } */
 
     .hero{
-      padding: 5% 8%;
+      margin: 5% 8%;
+      /* padding: 5% 8%; */
     }
 
     .cart-container{
@@ -868,7 +924,7 @@ footer{
 
 @media (min-width: 1600px){
   main{
-    background: url(images/vector_graphic_hero.jpg) -50px bottom no-repeat;
+   
     background-size: 900px auto;
   }
 
@@ -878,6 +934,7 @@ footer{
 
 
   .hero{
-    padding: 5% 0%;
+    /* padding: 5% 0%; */
+    
   }
 }
