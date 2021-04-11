@@ -10,77 +10,85 @@
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-
-    <header>
-            <div class="social container">
-                <div class="social-icons-ul">
-                    <span class="icon icon-instagram" role="img" aria-label="instagram icon"><img src="images/instagram.svg" alt="instagram icon"> </span>
-                    <span class="icon icon-facebook" role="img" aria-label="facebook icon"><img src="images/facebook.svg" alt="facebook icon"> </span>
-                </div>
-            </div>
-            <nav class="navbar">
-                <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="images/logo_detra.svg" height="15px" width="auto" alt="detramax logo"  class="d-flex align-text-top
-                    ">
-                </a>
-
-              
-                <div class="navbar-nav-wrapper">
-                    <button class="menu" aria-label="Main Menu">
-                        <svg width="100" height="100" viewBox="0 0 100 100">
-                        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                        <path class="line line2" d="M 20,50 H 80" />
-                        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-                        </svg>
-                    </button>
-                    <ul class="navbar-nav navAnimHide">
-                        <h3 class="mobile-menu-title">MENU</h3>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#hero">Strona Główna</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#products">Linia Detramax</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#news">Dowiedz się więcej</a>
-                        </li>
-                        <li class="nav-item contact-item">
-                            <a class="nav-link" href="#footer">Kontakt</a>
-                        </li>
-                        <li>
+<div class="main-page-wrapper">
+            <header>
+                    <div class="social container">
                         <div class="social-icons-ul">
-                            <span class="icon icon-instagram" onclick="location.href='https://instagram.com'" role="img" aria-label="instagram icon"><img src="images/Vector-1.svg" alt="instagram icon"> </span>
-                            <span class="icon icon-facebook" onclick="location.href='https://facebook.com'" role="img" aria-label="facebook icon"><img src="images/Vector.svg" alt="facebook icon"> </span>
+                            <span class="icon icon-instagram" role="img" aria-label="instagram icon"><img src="images/instagram.svg" alt="instagram icon"> </span>
+                            <span class="icon icon-facebook" role="img" aria-label="facebook icon"><img src="images/facebook.svg" alt="facebook icon"> </span>
                         </div>
-                        </li>
-                    </ul>
-                </div>
-                </div>
-            </nav>
-    </header>
-    <main>
-    <div class="hero-wrapper container d-flex flex-column justify-content-center align-items-center">
-        <div class="hero container" id="hero">
-                <div class="col col-md-8 col-lg-6 col-xl-5 col-xxl-5 hero-content__right">
-                    <h1>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit. </h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit hendrerit elit. Mauris gravida nisl vestibulum tempor mattis. Cras eget vulputate orci. Morbi dui arcu, consectetur non semper et, dapibus a velit.</p>
-                    <button class="cta" onClick="document.querySelector('.news').scrollIntoView();">Dowiedz się więcej<span class="btn-icon" role="img"><img src="images/arrow-right.svg" alt="arrow vector icon"></span></button>
-                </div>
+                    </div>
+                    <nav class="navbar">
+                        <div class="container">
+                        <a class="navbar-brand" href="#">
+                            <img src="images/logo_detra.svg" height="15px" width="auto" alt="detramax logo"  class="d-flex align-text-top
+                            ">
+                        </a>
+
+                    
+                        <div class="navbar-nav-wrapper">
+                            <button class="menu" aria-label="Main Menu">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                                <path class="line line2" d="M 20,50 H 80" />
+                                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                                </svg>
+                            </button>
+                            <ul class="navbar-nav navAnimHide">
+                                <h3 class="mobile-menu-title">MENU</h3>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#hero">Strona Główna</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#products">Linia Detramax</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#news">Dowiedz się więcej</a>
+                                </li>
+                                <li class="nav-item nav-contact-item">
+                                    <a class="nav-link" href="#footer">Kontakt</a>
+                                </li>
+                                <li>
+                                <div class="social-icons-ul">
+                                    <span class="icon icon-instagram" onclick="location.href='https://instagram.com'" role="img" aria-label="instagram icon"><img src="images/Vector-1.svg" alt="instagram icon"> </span>
+                                    <span class="icon icon-facebook" onclick="location.href='https://facebook.com'" role="img" aria-label="facebook icon"><img src="images/Vector.svg" alt="facebook icon"> </span>
+                                </div>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </nav>
+            </header>
+            <main>
+          
+            <div class="hero" id="hero">
+                 <div class="container">
+                        <div class="col col-md-6 col-lg-6 col-xl-6 order-md-2 hero-content__right">
+                            <h1><span class="text-span">Detramax</span> – więcej dla Twoich nóg.</h1>
+                            <p>Kompleksowa opieka dla zdrowia Twoich nóg. Kompozycja składników linii produktów
+                                Detramax wspiera mikrokrążenie żylne i zmniejsza uczucie ciężkości nóg. Bo Twoje nogi chcą, mogą i
+                                zasługują na więcej…</p>
+                            <button class="cta" onClick="document.querySelector('.news').scrollIntoView();">Dowiedz się więcej<span class="btn-icon" role="img"><img src="images/arrow-right.svg" alt="arrow vector icon"></span></button>
+                        </div>
+                 </div>  
+            </div>
+        </main>
+        <div class="scroll-container">
+           <img class="scroller" src="images/scroll-down.svg">
         </div>
-    </div>
-    <div class="scroll-container">
-        <div class="scroller"></div>
-    </div>
-</main>
+</div>
 <button class="cart-container" onclick="location.href='http://www.detramax.pl/produkty'">
     <div class="cart"><img src="images/cart.svg" alt="ikona koszyka"><span>kup online</span></div>
 </button>
+
 <section class="products" id="products">
     <div class="row">
         <div class="col col-lg-6 products-content__right">
-            <h2>Odkryj linię <span class="text-span">Detramax</span>.</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit hendrerit elit. Mauris gravida nisl vestibulum tempor mattis. Cras eget vulputate orci. Morbi dui arcu, consectetur non semper et, dapibus a velit.</p>
+            <h2>Linia <span class="text-span">Detramax</span>.</h2>
+            <p>Suplementy i specjalistyczne produkty z linii Detramax dedykowane są nogom, aby mogły czuć się
+                lekko, zachowując przy tym pełnię zdrowia. Naturalne składniki, a wśród nich ekstrakt z liści winorośli
+                właściwej (Vitis Vinifera), pestek winogron i witamina C skutecznie wspomagają mikrokrążenie żylne i
+                wzmacniają naczynia krwionośne.</p>
             <button class="cta">Sprawdź<span class="btn-icon" role="img"><img src="images/arrow-right.svg" alt="arrow vector icon"></span></button>
         </div>
 
@@ -127,8 +135,10 @@
                 <img src="images/grapes_container.jpg" alt="zdjecie czarnego winogrono">
             </div>
             <div class="col pre-news-content d-md-flex flex-md-column justify-content-md-center">
-                <h2>Ekstrakt z liści <span class="text-span">winorośli</span>.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia officiis fuga ad quisquam mollitia omnis quae delectus commodi dolor officia, ratione nam vel. Velit, corporis adipisci deserunt veritatis repudiandae nesciunt et consequuntur magnam. 
+                <h2>Ekstrakt z liści <span class="text-span">winorośli właściwej</span>.</h2>
+                <p>Inaczej Vitis Vinifera to naturalne wsparcie w walce z problemem ciężkich nóg. Wspomaga
+                    mikrokrążenie żylne oraz ma działanie antyoksydacyjne. Dzięki temu składnikowi w suplemencie
+                    Detramax, Twoje nogi stają się zdrowe i lekkie. 
                 </p>
             </div>
         </div>
@@ -139,7 +149,9 @@
     <div class="container">
         <header>
             <h2>Aktualności <span class="text-span">Detramax</span>.</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit hendrerit elit. Mauris gravida nisl vestibulum tempor mattis. Cras eget vulputate orci. Morbi dui arcu, consectetur non semper et, dapibus a velit.</p>
+            <p>Chcesz dowiedzieć się więcej o tym jak zachować zdrowie swoich nóg? Zapraszamy do artykułów
+                stworzonych we współpracy z ekspertami, które odpowiedzą na nurtujące Cię pytania i pomogą
+                zmienić nawyki. Bo linia produktów Detramax to zdecydowanie więcej dla Twoich nóg.</p>
         </header>
         <div class="row justify-content-sm-center justify-content-md-evenly">
             <div class="post col">
@@ -186,7 +198,9 @@
             <div class="company-desc d-flex flex-column">
                 <img class="logo-footer" src="images/logo_white.svg" alt="logo firmy detramax">
                 <h3>NOVASCON PHARMACEUTICALS SP. Z O.O.</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                <p>Firma specjalizująca się w opracowywaniu i wprowadzaniu na rynek nowatorskich suplementów
+                    diety, dietetycznych środków spożywczych specjalnego przeznaczenia medycznego, wyrobów
+                    medycznych oraz kosmetyków.</p>
             </div>
         </div>
         <div class="col col-md-3 contact">
@@ -221,8 +235,6 @@
         <p class="para-digistat">Design by <span>Digistat</span></p>
     </div>
 </div>
-
-
 
     <script src="app.js "></script>
     <script src="inc/splide.min.js"></script>
